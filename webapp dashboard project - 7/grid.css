@@ -1,0 +1,150 @@
+/* Creating the grid */
+
+.page-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60px 50px auto;
+  grid-template-areas:
+"header"
+"navigation"
+"main";
+}
+
+.main {
+  display: grid;
+  padding: 0 10px 10px 10px;
+}
+
+.header {
+grid-area: header;
+}
+.navigation {
+grid-area: navigation;
+}
+.main {
+grid-area: main;
+}
+
+section {
+  /* border-top: 1px solid #a4a7be; */
+  border-bottom: 1px solid #c9c9c9;
+  /* margin-bottom: 10px; */
+}
+
+canvas {
+  margin: 10px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-container {
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 60px auto;
+    grid-template-areas:
+"header header"
+"navigation main";
+  }
+  .header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .navigation {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    a {
+      margin: 10px 0;
+    }
+  }
+
+  .notification {
+    min-width: 180px;
+    width: auto;
+    left: auto;
+    right: 120px;
+    li {
+      justify-content: space-between;
+    }
+  }
+  .traffic-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+/* Main container grid */
+
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-header {
+    grid-column: 1 / span 2;
+  }
+  .social-icons-container {
+    display: flex;
+    gap: 10px;
+  }
+  .social-container {
+    flex: auto;
+  }
+  .alert {
+    grid-column: 1 / span 2;
+  }
+  .traffic-nav {
+    padding: 0;
+  }
+  .daily, .mobile {
+    padding: 10px;
+  }
+
+  .mobile {
+    border-left: 1px solid #c9c9c9;
+  }
+  .traffic, .social-stats {
+    grid-column: 1 / span 2;
+  }
+  .members-container {
+    flex-direction: row;
+  }
+  .new-members, .message {
+    padding-right: 5px;
+    grid-column: 1 / span 2;
+  }
+  .recent-members, .settings {
+    grid-column: 1 / span 2;
+  }
+  .members-text {
+    text-align: left;
+    margin-right: auto;
+    margin-left: 10px;
+  }
+  .toggle-container {
+    width: 35vw;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .new-members, .message {
+    padding-right: 5px;
+    grid-column: 1 / span 1;
+    border-right: 1px solid #c9c9c9;
+  }
+  .recent-members, .settings {
+    padding-left: 5px;
+    grid-column: 2 / span 1;
+  }
+}
+
+/* .widget-container-full, .widget-container-half {
+  width: 95vw;
+}
+@media (min-width: 768px) {
+  .widget-container-full {
+    width: 90vw;
+  }
+  .widget-container-half {
+    width: 45vw;
+  }
+} */
