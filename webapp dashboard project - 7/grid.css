@@ -55,7 +55,13 @@ canvas {
       margin: 10px 0;
     }
   }
-
+  .fixed-nav {
+    width: auto;
+    height: 100%;
+  }
+  .mobile, .new-members, .settings {
+    scroll-margin-top: 0;
+  }
   .notification {
     min-width: 180px;
     width: auto;
