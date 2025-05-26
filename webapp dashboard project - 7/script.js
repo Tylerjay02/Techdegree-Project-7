@@ -71,6 +71,17 @@ function checkUnreadMessages() {
 checkUnreadMessages();
 
 
+// Scrolling static nav bar //
+
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.navigation');
+    if (window.scrollY > 60) {
+      nav.classList.add('fixed-nav');
+    } else {
+      nav.classList.remove('fixed-nav');
+    }
+  });
+
 // Message and Send Section //
 
 const user = document.getElementById("userField");
