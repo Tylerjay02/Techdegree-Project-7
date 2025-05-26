@@ -58,12 +58,12 @@ section {
 }
 
 .notif-bell-container {
-  border-right: 2px solid #a4a7be;
-  padding-top: 9px;
+  border-right: 1px solid #a4a7be;
+  padding: 5px 0;
 }
 
 .notif-bell {
-  width: 22px;
+  width: 24px;
   padding-right: 5px;
   transition: transform .3s ease-out;
   path {
@@ -73,7 +73,15 @@ section {
 
 .notif-bell:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+.notif-bell-green-alert {
+  background: #90ee90;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 0 5px 0 auto;
 }
 
 .member-1 {
