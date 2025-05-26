@@ -10,6 +10,15 @@ bellToggle.addEventListener('click', () => {
     listContainer.style.display = 'none';
   } else {
     listContainer.style.display = 'block';
+
+    // Check if there are notifications (list items)
+    if (list.children.length > 0) {
+      const bellAlert = document.querySelector('.notif-bell-green-alert');
+      if (bellAlert) {
+        bellAlert.style.display = 'none';
+        bellToggle.style.marginTop = '5px';
+      }
+    }
   }
 });
 
@@ -35,6 +44,7 @@ function addRemoveX(li) {
 }
 
 // Alert pop-up if there are notifications //
+
 
 // Check for unread messages and alert if any //
 function checkUnreadMessages() {
