@@ -134,10 +134,26 @@ section {
 /* Nav */
 
 .navigation {
+  position: static;
   display: flex;
   justify-content: space-evenly;
   background-color: #4d4c72;
   padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.navigation a {
+  height: 30px;
 }
 
 .home-icon,
@@ -145,7 +161,12 @@ section {
 .members-icon,
 .settings-icon {
   height: 30px;
+  width: 30px;
 }
+
+.mobile, .new-members, .settings {
+    scroll-margin-top: 50px;
+  }
 
 /* Dasboard */
 
